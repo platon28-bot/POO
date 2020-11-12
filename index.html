@@ -1,60 +1,108 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>mi abuela </title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
- <style>
-#animation{background-color:rgb(61, 194, 228); width: 600px}
+<head> 
+<title>...</title>
+<style>
 
-</style> </head>
-  <body>
+div{background-color:blue;}
 
+h1{text-align: center;}
+
+
+</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body align="center">
+
+  <!-- <div> -->
+
+
+<div id="a"><h2 id="aa">hola</h2></div><br><br>
+<div id="b"><h id="bb">aqui toy</h2></div><br><br>
+<div id="c"><h2 id="cc">me voy</h2></div>    
+
+
+<!-- </div> -->
+
+<br>
+<br>
+<br>
+
+<!-- <input type="text" id="inp"> -->
+
+
+
+<br>
+<br>
+<br>
+
+<script>
+
+var libro_a = document.getElementById('a');
+var aa = document.getElementById('aa');
+
+var bb = document.getElementById('bb');
+var libro_b = document.getElementById('b');
+
+var libro_c = document.getElementById('c');
+var cc = document.getElementById('cc');
+
+
+class Libro{
+constructor (a, b, c, x, w, h){
+
+this.titulo = a;
+this.color = b;
+this.paginas = c;
+this.w = w;
+this.h = h;
+
+
+
+this.x = x;
+
+Libro.prototype.ventas = function(x=this.x){
   
-
-    <script>
-     
-     class Libro {
-
-      constructor(a, b, c){
-
-    this.titulo = a;
-    this.paginas = b;
-    this.color=c;
-
-      }}
+  // if(false){alert("mala")}else{alert("buena")}
+  
+  if(x<1000){alert("mala")}
+  if(x==1000){alert("media")}
+  if(x>1000){alert("buena")}
 
 
-      class Car  {
+}
 
-constructor(a, b, c){
+}
 
-this.llantas  = a;
-this.puertas  = b;
-this.color=c;
 
-}}
-
-    chispita= new Car ("alberth", prompt("introduce un numero de puertas "), "verde");
-
-    caperusita= new Libro("marcos with", "10", "rojo");
-
-    nacho= new Libro("alicia", "100", "verde");
-
-      document.write(caperusita.color + "<br><br>");
-      document.write("titulo del libro: " +nacho.titulo + "<br><br>");
-      document.write("puertas de auto: " +chispita.puertas);
-
-     //hola
-// k hay te hackie
+}
 
 
 
 
+caperusita = new Libro("caperusita roja", "rojo", 10, 20, 100, 150);
+elprincipito = new Libro("el principito", "crema", 20,20, 100, 150);
+pinocho = new Libro("pinnocho", "amarillo", 20,20, 100, 150);
 
+
+// caperusita.ventas();
+
+
+
+libro_a.style.width = caperusita.w + "px";
+libro_a.style.height = caperusita.h + "px";
+aa.innerHTML = caperusita.titulo;
+
+libro_b.style.width = elprincipito.w + "px";
+libro_b.style.height = elprincipito.h + "px";
+bb.innerHTML = elprincipito.titulo;
+
+libro_c.style.width = pinocho.w + "px";
+libro_c.style.height = pinocho.h + "px";
+cc.innerHTML = pinocho.titulo;
 
 
 </script>
-  </body>
+</body>
 </html>
